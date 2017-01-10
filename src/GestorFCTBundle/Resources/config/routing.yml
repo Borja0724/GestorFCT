@@ -1,0 +1,37 @@
+gestor_fct_homepage:
+    path:     /
+    defaults: { _controller: GestorFCTBundle:Default:index }
+
+gestor_fct_empresa:
+    path:     /empresa
+    defaults: { _controller: GestorFCTBundle:Empresa:mostrarTabla }
+
+Formulario_empresa:
+    path:     /empresa/new
+    defaults: { _controller: GestorFCTBundle:Formulario:formulario }
+
+alumno_empresa:
+    path:     /alumno/all
+    defaults: { _controller: GestorFCTBundle:Alumno:mostrarAlumno }
+
+ gestor_fct_api:
+    path:     /empresas/api
+    defaults: { _controller: GestorFCTBundle:Empresa:empresas }
+    methods: [GET]
+
+profesor_all:
+    path:     /profesor/all
+    defaults: { _controller: GestorFCTBundle:Profesor:mostrarProfesor }
+
+profesor_form:
+    path:     /profesor/new
+    defaults: { _controller: GestorFCTBundle:Profesor:formularioProfesor }
+
+profesor_api:
+    path:     /profesor/api
+    defaults: { _controller: GestorFCTBundle:Profesor:proferosesApi }
+    methods: [GET]
+
+registrarse:
+    path:     /registrarse
+    defaults: { _controller: GestorFCTBundle:Registration:register }
