@@ -102,11 +102,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         if (0 === strpos($pathinfo, '/gestor')) {
             // gestor_fct_homepage
-            if (rtrim($pathinfo, '/') === '/gestor') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'gestor_fct_homepage');
-                }
-
+            if ($pathinfo === '/gestor/home') {
                 return array (  '_controller' => 'GestorFCTBundle\\Controller\\DefaultController::indexAction',  '_route' => 'gestor_fct_homepage',);
             }
 
@@ -164,8 +160,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             // registrarse
-            if ($pathinfo === '/gestor/registrarse') {
+            if (rtrim($pathinfo, '/') === '/gestor') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'registrarse');
+                }
+
                 return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'registrarse',);
+            }
+
+            // login
+            if ($pathinfo === '/gestor/login') {
+                return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::loginAction',  '_route' => 'login',);
             }
 
         }
@@ -177,6 +182,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+        }
+
+        // logout
+        if ($pathinfo === '/gestor/logout') {
+            return array('_route' => 'logout');
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

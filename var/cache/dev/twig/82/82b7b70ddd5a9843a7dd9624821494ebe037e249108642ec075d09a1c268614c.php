@@ -21,20 +21,20 @@ class __TwigTemplate_2563f13e22ad98374a721edbca6afbb89d55a87aceb8f20adf1d008f977
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c3b7b590132e18ef1198f9d8dda6343630c9f79eb2e6696322105331ce7ad754 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c3b7b590132e18ef1198f9d8dda6343630c9f79eb2e6696322105331ce7ad754->enter($__internal_c3b7b590132e18ef1198f9d8dda6343630c9f79eb2e6696322105331ce7ad754_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:profesor.html.twig"));
+        $__internal_c83b952e075064d9954a35ef50a2ea9f775e2b07276904b93441acb8968ba4a0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c83b952e075064d9954a35ef50a2ea9f775e2b07276904b93441acb8968ba4a0->enter($__internal_c83b952e075064d9954a35ef50a2ea9f775e2b07276904b93441acb8968ba4a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:profesor.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c3b7b590132e18ef1198f9d8dda6343630c9f79eb2e6696322105331ce7ad754->leave($__internal_c3b7b590132e18ef1198f9d8dda6343630c9f79eb2e6696322105331ce7ad754_prof);
+        $__internal_c83b952e075064d9954a35ef50a2ea9f775e2b07276904b93441acb8968ba4a0->leave($__internal_c83b952e075064d9954a35ef50a2ea9f775e2b07276904b93441acb8968ba4a0_prof);
 
     }
 
     // line 3
     public function block_contenido($context, array $blocks = array())
     {
-        $__internal_cbfc23c2ba46ce5a6872ec92471713f4db92c80f4e2629852f0ceed57a7a4eac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cbfc23c2ba46ce5a6872ec92471713f4db92c80f4e2629852f0ceed57a7a4eac->enter($__internal_cbfc23c2ba46ce5a6872ec92471713f4db92c80f4e2629852f0ceed57a7a4eac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:profesor.html.twig"));
+        $__internal_5bf5abbf8815aacb369b4b25213afc54d74b69873df4e94581d2da14e1391056 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5bf5abbf8815aacb369b4b25213afc54d74b69873df4e94581d2da14e1391056->enter($__internal_5bf5abbf8815aacb369b4b25213afc54d74b69873df4e94581d2da14e1391056_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:profesor.html.twig"));
 
         // line 4
         echo "<div id=\"page-content-wrapper\">
@@ -95,7 +95,7 @@ class __TwigTemplate_2563f13e22ad98374a721edbca6afbb89d55a87aceb8f20adf1d008f977
 
 ";
         
-        $__internal_cbfc23c2ba46ce5a6872ec92471713f4db92c80f4e2629852f0ceed57a7a4eac->leave($__internal_cbfc23c2ba46ce5a6872ec92471713f4db92c80f4e2629852f0ceed57a7a4eac_prof);
+        $__internal_5bf5abbf8815aacb369b4b25213afc54d74b69873df4e94581d2da14e1391056->leave($__internal_5bf5abbf8815aacb369b4b25213afc54d74b69873df4e94581d2da14e1391056_prof);
 
     }
 

@@ -1,5 +1,5 @@
 gestor_fct_homepage:
-    path:     /
+    path:     /home
     defaults: { _controller: GestorFCTBundle:Default:index }
 
 gestor_fct_empresa:
@@ -33,5 +33,9 @@ profesor_api:
     methods: [GET]
 
 registrarse:
-    path:     /registrarse
+    path:     /
     defaults: { _controller: GestorFCTBundle:Registration:register }
+
+login:
+    path:     /login
+    defaults: { _controller: GestorFCTBundle:Registration:login }

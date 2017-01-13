@@ -21,20 +21,20 @@ class __TwigTemplate_5d84cf05434d9e7831c2bec706f098bcc205ed4f759958a8a43813331fe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_91af8e75685bad7ad63082ceb24486f492ef82558676be4cf2d8dcea4bf8f53e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_91af8e75685bad7ad63082ceb24486f492ef82558676be4cf2d8dcea4bf8f53e->enter($__internal_91af8e75685bad7ad63082ceb24486f492ef82558676be4cf2d8dcea4bf8f53e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:empresa.html.twig"));
+        $__internal_9e63ef2a9db5505c8dea6feaaae3e4d210cca8ec2686455c95d485c1d1e6d381 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9e63ef2a9db5505c8dea6feaaae3e4d210cca8ec2686455c95d485c1d1e6d381->enter($__internal_9e63ef2a9db5505c8dea6feaaae3e4d210cca8ec2686455c95d485c1d1e6d381_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:empresa.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_91af8e75685bad7ad63082ceb24486f492ef82558676be4cf2d8dcea4bf8f53e->leave($__internal_91af8e75685bad7ad63082ceb24486f492ef82558676be4cf2d8dcea4bf8f53e_prof);
+        $__internal_9e63ef2a9db5505c8dea6feaaae3e4d210cca8ec2686455c95d485c1d1e6d381->leave($__internal_9e63ef2a9db5505c8dea6feaaae3e4d210cca8ec2686455c95d485c1d1e6d381_prof);
 
     }
 
     // line 3
     public function block_contenido($context, array $blocks = array())
     {
-        $__internal_65fe8552d7e3fe5f154c5f4440be8c1cc2a1409cdd99e5e3368a4f1dc60759dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_65fe8552d7e3fe5f154c5f4440be8c1cc2a1409cdd99e5e3368a4f1dc60759dc->enter($__internal_65fe8552d7e3fe5f154c5f4440be8c1cc2a1409cdd99e5e3368a4f1dc60759dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:empresa.html.twig"));
+        $__internal_adf967a375402e0dba02e8ddb6a69413458e5797b5e830ecc8cd1ceb63dcb3f6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_adf967a375402e0dba02e8ddb6a69413458e5797b5e830ecc8cd1ceb63dcb3f6->enter($__internal_adf967a375402e0dba02e8ddb6a69413458e5797b5e830ecc8cd1ceb63dcb3f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:empresa.html.twig"));
 
         // line 4
         echo "<div id=\"page-content-wrapper\">
@@ -110,7 +110,7 @@ class __TwigTemplate_5d84cf05434d9e7831c2bec706f098bcc205ed4f759958a8a43813331fe
 
 ";
         
-        $__internal_65fe8552d7e3fe5f154c5f4440be8c1cc2a1409cdd99e5e3368a4f1dc60759dc->leave($__internal_65fe8552d7e3fe5f154c5f4440be8c1cc2a1409cdd99e5e3368a4f1dc60759dc_prof);
+        $__internal_adf967a375402e0dba02e8ddb6a69413458e5797b5e830ecc8cd1ceb63dcb3f6->leave($__internal_adf967a375402e0dba02e8ddb6a69413458e5797b5e830ecc8cd1ceb63dcb3f6_prof);
 
     }
 
