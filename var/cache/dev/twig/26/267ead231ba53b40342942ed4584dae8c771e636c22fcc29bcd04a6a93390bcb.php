@@ -21,96 +21,121 @@ class __TwigTemplate_5d7e7164b7a26b204ffe93cc808a3232085464ba31e7a3ed9a32e526626
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_93b6801b9dace1f440137f15b8ee711beccc6b95db85f346b3ff75f6f72facd6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_93b6801b9dace1f440137f15b8ee711beccc6b95db85f346b3ff75f6f72facd6->enter($__internal_93b6801b9dace1f440137f15b8ee711beccc6b95db85f346b3ff75f6f72facd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:alumno.html.twig"));
+        $__internal_b18dda86b327485eb9225693c5c504ecd8367bc95fe4fb29a9dc09f00bc27f3f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b18dda86b327485eb9225693c5c504ecd8367bc95fe4fb29a9dc09f00bc27f3f->enter($__internal_b18dda86b327485eb9225693c5c504ecd8367bc95fe4fb29a9dc09f00bc27f3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:alumno.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_93b6801b9dace1f440137f15b8ee711beccc6b95db85f346b3ff75f6f72facd6->leave($__internal_93b6801b9dace1f440137f15b8ee711beccc6b95db85f346b3ff75f6f72facd6_prof);
+        $__internal_b18dda86b327485eb9225693c5c504ecd8367bc95fe4fb29a9dc09f00bc27f3f->leave($__internal_b18dda86b327485eb9225693c5c504ecd8367bc95fe4fb29a9dc09f00bc27f3f_prof);
 
     }
 
     // line 3
     public function block_contenido($context, array $blocks = array())
     {
-        $__internal_751d59ac7bb231c8fa8953275e4f8ee455a575c555b086e57c2a22ec3752a976 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_751d59ac7bb231c8fa8953275e4f8ee455a575c555b086e57c2a22ec3752a976->enter($__internal_751d59ac7bb231c8fa8953275e4f8ee455a575c555b086e57c2a22ec3752a976_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:alumno.html.twig"));
+        $__internal_c2963d3fa6eeff9ebc1f9c64317c07a807f80ad3a0bc72e95fc02015ce2b1cf6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c2963d3fa6eeff9ebc1f9c64317c07a807f80ad3a0bc72e95fc02015ce2b1cf6->enter($__internal_c2963d3fa6eeff9ebc1f9c64317c07a807f80ad3a0bc72e95fc02015ce2b1cf6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:alumno.html.twig"));
 
         // line 4
-        echo "<div id=\"page-content-wrapper\">
-    <div class=\"container-fluid\">
-        <div class=\"row\">
-            <div class=\"col-lg-12\">
-              <table class=\"table table-hover\">
+        echo "
+<div id=\"page-wrapper\">
+    <div class=\"row\">
+        <div class=\"col-lg-12\">
+            <h1 class=\"page-header\">Alumnos</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
 
-                <tr>
+    <div class=\"row\">
+        <div>
+            <div class=\"panel panel-default\">
+                <!-- /.panel-heading -->
+                <div class=\"panel-body\">
+                    <div class=\"table-responsive\">
+                        <table class=\"table table-hover\">
+                          <thead>
+                            <tr>
 
-                  <th> # </th>
-                  <th> NOMBRE </th>
-                  <th> APELLIDO 1 </th>
-                  <th> APELLIDO 2 </th>
-                  <th> CILCLO </th>
-                  <th> EMPRESA </th>
-                  <th> PROFESOR </th>
+                              <th> # </th>
+                              <th> NOMBRE </th>
+                              <th> APELLIDO 1 </th>
+                              <th> APELLIDO 2 </th>
+                              <th> CILCLO </th>
+                              <th> EMPRESA </th>
+                              <th> PROFESOR </th>
 
-                </tr>
-
-                ";
-        // line 22
+                            </tr>
+                          </thead>
+                          <tbody>
+                            ";
+        // line 34
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($context["alumno"]);
         foreach ($context['_seq'] as $context["_key"] => $context["alumno"]) {
-            // line 23
+            // line 35
             echo "
-                  <tr>
-                      <td>";
-            // line 25
+                              <tr>
+                                  <td>";
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["alumno"], "id", array()), "html", null, true);
             echo "</td>
-                      <td>";
-            // line 26
+                                  <td>";
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["alumno"], "nombre", array()), "html", null, true);
             echo "</td>
-                      <td>";
-            // line 27
+                                  <td>";
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["alumno"], "apellido1", array()), "html", null, true);
             echo "</td>
-                      <td>";
-            // line 28
+                                  <td>";
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["alumno"], "apellido2", array()), "html", null, true);
             echo "</td>
-                      <td>";
-            // line 29
+                                  <td>";
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["alumno"], "ciclo", array()), "html", null, true);
             echo "</td>
-                      <td>";
-            // line 30
+                                  <td>";
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["alumno"], "empresa", array()), "nombre", array()), "html", null, true);
             echo "</td>
-                      <td>";
-            // line 31
+                                  <td>";
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["alumno"], "profesor", array()), "nombre", array()), "html", null, true);
             echo "</td>
-                  </tr>
+                              </tr>
 
-                ";
+                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['alumno'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 47
         echo "
-              </table>
+                          </tbody>
+                        </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
             </div>
+            <!-- /.panel -->
         </div>
+        <!-- /.col-lg-6 -->
+
     </div>
+    <!-- /.row -->
 </div>
+<!-- /#page-wrapper -->
+
+
+
 
 
 
 ";
         
-        $__internal_751d59ac7bb231c8fa8953275e4f8ee455a575c555b086e57c2a22ec3752a976->leave($__internal_751d59ac7bb231c8fa8953275e4f8ee455a575c555b086e57c2a22ec3752a976_prof);
+        $__internal_c2963d3fa6eeff9ebc1f9c64317c07a807f80ad3a0bc72e95fc02015ce2b1cf6->leave($__internal_c2963d3fa6eeff9ebc1f9c64317c07a807f80ad3a0bc72e95fc02015ce2b1cf6_prof);
 
     }
 
@@ -126,7 +151,7 @@ class __TwigTemplate_5d7e7164b7a26b204ffe93cc808a3232085464ba31e7a3ed9a32e526626
 
     public function getDebugInfo()
     {
-        return array (  102 => 35,  92 => 31,  88 => 30,  84 => 29,  80 => 28,  76 => 27,  72 => 26,  68 => 25,  64 => 23,  60 => 22,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  114 => 47,  104 => 43,  100 => 42,  96 => 41,  92 => 40,  88 => 39,  84 => 38,  80 => 37,  76 => 35,  72 => 34,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -142,43 +167,68 @@ class __TwigTemplate_5d7e7164b7a26b204ffe93cc808a3232085464ba31e7a3ed9a32e526626
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block contenido %}
-<div id=\"page-content-wrapper\">
-    <div class=\"container-fluid\">
-        <div class=\"row\">
-            <div class=\"col-lg-12\">
-              <table class=\"table table-hover\">
 
-                <tr>
-
-                  <th> # </th>
-                  <th> NOMBRE </th>
-                  <th> APELLIDO 1 </th>
-                  <th> APELLIDO 2 </th>
-                  <th> CILCLO </th>
-                  <th> EMPRESA </th>
-                  <th> PROFESOR </th>
-
-                </tr>
-
-                {% for alumno in alumno %}
-
-                  <tr>
-                      <td>{{ alumno.id }}</td>
-                      <td>{{ alumno.nombre }}</td>
-                      <td>{{ alumno.apellido1 }}</td>
-                      <td>{{ alumno.apellido2 }}</td>
-                      <td>{{ alumno.ciclo }}</td>
-                      <td>{{ alumno.empresa.nombre}}</td>
-                      <td>{{ alumno.profesor.nombre}}</td>
-                  </tr>
-
-                {% endfor %}
-
-              </table>
-            </div>
+<div id=\"page-wrapper\">
+    <div class=\"row\">
+        <div class=\"col-lg-12\">
+            <h1 class=\"page-header\">Alumnos</h1>
         </div>
+        <!-- /.col-lg-12 -->
     </div>
+
+    <div class=\"row\">
+        <div>
+            <div class=\"panel panel-default\">
+                <!-- /.panel-heading -->
+                <div class=\"panel-body\">
+                    <div class=\"table-responsive\">
+                        <table class=\"table table-hover\">
+                          <thead>
+                            <tr>
+
+                              <th> # </th>
+                              <th> NOMBRE </th>
+                              <th> APELLIDO 1 </th>
+                              <th> APELLIDO 2 </th>
+                              <th> CILCLO </th>
+                              <th> EMPRESA </th>
+                              <th> PROFESOR </th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for alumno in alumno %}
+
+                              <tr>
+                                  <td>{{ alumno.id }}</td>
+                                  <td>{{ alumno.nombre }}</td>
+                                  <td>{{ alumno.apellido1 }}</td>
+                                  <td>{{ alumno.apellido2 }}</td>
+                                  <td>{{ alumno.ciclo }}</td>
+                                  <td>{{ alumno.empresa.nombre}}</td>
+                                  <td>{{ alumno.profesor.nombre}}</td>
+                              </tr>
+
+                            {% endfor %}
+
+                          </tbody>
+                        </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+
+    </div>
+    <!-- /.row -->
 </div>
+<!-- /#page-wrapper -->
+
+
+
 
 
 

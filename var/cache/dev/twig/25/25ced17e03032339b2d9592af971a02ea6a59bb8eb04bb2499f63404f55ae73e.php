@@ -10,7 +10,6 @@ class __TwigTemplate_f7a6ab47ef6d94aac3ad9ef24ba3d161ab3f63aae953bccc48d53cad827
         $this->parent = false;
 
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'menu' => array($this, 'block_menu'),
             'contenido' => array($this, 'block_contenido'),
             'javascripts' => array($this, 'block_javascripts'),
@@ -19,8 +18,8 @@ class __TwigTemplate_f7a6ab47ef6d94aac3ad9ef24ba3d161ab3f63aae953bccc48d53cad827
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6064bfdb5949d701420e30ecb8cdc3332c302a58e60b6af3e7b0c1a1a5633988 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6064bfdb5949d701420e30ecb8cdc3332c302a58e60b6af3e7b0c1a1a5633988->enter($__internal_6064bfdb5949d701420e30ecb8cdc3332c302a58e60b6af3e7b0c1a1a5633988_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_8c25309ed44350c60b73dd63ee254e3e3aa2e816f0ff6a10fd38af47c86e10de = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8c25309ed44350c60b73dd63ee254e3e3aa2e816f0ff6a10fd38af47c86e10de->enter($__internal_8c25309ed44350c60b73dd63ee254e3e3aa2e816f0ff6a10fd38af47c86e10de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -28,132 +27,219 @@ class __TwigTemplate_f7a6ab47ef6d94aac3ad9ef24ba3d161ab3f63aae953bccc48d53cad827
 
     <head>
 
-        <meta charset=\"UTF-8\" />
-        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-        <meta name=\"viewport\" content=\"width=device-width, shrink-to-fit=no, initial-scale=1\">
-        <meta name=\"description\" content=\"\">
-        <meta name=\"author\" content=\"\">
+      <meta charset=\"utf-8\">
+      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+      <meta name=\"description\" content=\"\">
+      <meta name=\"author\" content=\"\">
 
-        <title>";
-        // line 12
-        $this->displayBlock('title', $context, $blocks);
-        echo "</title>
+      <title> GESTOR FCT</title>
 
-        <link href=\"";
+      <link href=\"";
         // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
+        echo "\"rel=\"stylesheet\">
+      <link href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/metisMenu.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-
-        <!-- Custom CSS -->
-        <link href=\"";
+      <link href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/sb-admin-2.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+      <link href=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/simple-sidebar.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/morris.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
-
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
+      <link href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/font/css/font-awesome.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
 
     </head>
     <body>
 
       ";
-        // line 24
+        // line 23
         $this->displayBlock('menu', $context, $blocks);
-        // line 56
+        // line 120
         echo "
+
+
       ";
-        // line 57
-        $this->displayBlock('contenido', $context, $blocks);
-        // line 58
-        echo "
-      ";
-        // line 59
+        // line 123
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 60
+        // line 134
         echo "    </body>
 </html>
 ";
         
-        $__internal_6064bfdb5949d701420e30ecb8cdc3332c302a58e60b6af3e7b0c1a1a5633988->leave($__internal_6064bfdb5949d701420e30ecb8cdc3332c302a58e60b6af3e7b0c1a1a5633988_prof);
+        $__internal_8c25309ed44350c60b73dd63ee254e3e3aa2e816f0ff6a10fd38af47c86e10de->leave($__internal_8c25309ed44350c60b73dd63ee254e3e3aa2e816f0ff6a10fd38af47c86e10de_prof);
 
     }
 
-    // line 12
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_42c0cca66e42dc30cf74ddb1b287cba2d2b8d2d110e1c4150047d53506852efb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_42c0cca66e42dc30cf74ddb1b287cba2d2b8d2d110e1c4150047d53506852efb->enter($__internal_42c0cca66e42dc30cf74ddb1b287cba2d2b8d2d110e1c4150047d53506852efb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
-
-        echo "Welcome!";
-        
-        $__internal_42c0cca66e42dc30cf74ddb1b287cba2d2b8d2d110e1c4150047d53506852efb->leave($__internal_42c0cca66e42dc30cf74ddb1b287cba2d2b8d2d110e1c4150047d53506852efb_prof);
-
-    }
-
-    // line 24
+    // line 23
     public function block_menu($context, array $blocks = array())
     {
-        $__internal_a78ed82c99da73b38668a420bf3f15a4853c5c26cc649d5968d78d8ae7455c58 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a78ed82c99da73b38668a420bf3f15a4853c5c26cc649d5968d78d8ae7455c58->enter($__internal_a78ed82c99da73b38668a420bf3f15a4853c5c26cc649d5968d78d8ae7455c58_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
+        $__internal_c539a1175e4f47e363cd6cb1e72a41c1b5c23d89ae53d145c1ac3ce766eda95c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c539a1175e4f47e363cd6cb1e72a41c1b5c23d89ae53d145c1ac3ce766eda95c->enter($__internal_c539a1175e4f47e363cd6cb1e72a41c1b5c23d89ae53d145c1ac3ce766eda95c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
 
-        // line 25
+        // line 24
         echo "
-      <div id=\"wrapper\" class=\"md-3\">
+      <div id=\"wrapper\">
 
-          <!-- Sidebar -->
-          <div id=\"sidebar-wrapper\">
-              <ul class=\"sidebar-nav\">
-                  <li class=\"sidebar-brand\">
-                      <a href=\"/gestor/\">
-                          Gestor FCT
+          <!-- Navigation -->
+          <nav class=\"navbar navbar-default navbar-static-top\" role=\"navigation\" style=\"margin-bottom: 0\">
+              <div class=\"navbar-header\">
+                  <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
+                      <span class=\"sr-only\">Toggle navigation</span>
+                      <span class=\"icon-bar\"></span>
+                      <span class=\"icon-bar\"></span>
+                      <span class=\"icon-bar\"></span>
+                  </button>
+                  <a class=\"navbar-brand\" href=\"index.html\">GESTOR FCT</a>
+              </div>
+              <!-- /.navbar-header -->
+
+              <ul class=\"nav navbar-top-links navbar-right\">
+
+
+                  <li class=\"dropdown\">
+                      <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">
+                          <i class=\"fa fa-user fa-fw\"></i> <i class=\"fa fa-caret-down\"></i>
                       </a>
+                      <ul class=\"dropdown-menu dropdown-messages\">
+                          <li><a href=\"#\"><i class=\"fa fa-user fa-fw\"></i> User Profile</a>
+                          </li>
+                          <li><a href=\"#\"><i class=\"fa fa-gear fa-fw\"></i> Settings</a>
+                          </li>
+                          <li class=\"divider\"></li>
+                          <li><a href=\"login.html\"><i class=\"fa fa-sign-out fa-fw\"></i> Logout</a>
+                          </li>
+                      </ul>
+                      <!-- /.dropdown-user -->
                   </li>
-                  <li>
-                      <a href=\"/gestor/empresa\">Listado Empresas</a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/empresa/new\">Nueva Empresa</a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/alumno/all\">Listado Alumnos </a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/profesor/all\"> Listado Profesores </a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/profesor/new\"> Nuevos Profesores </a>
-                  </li>
-
+                  <!-- /.dropdown -->
               </ul>
-          </div>
-          <!-- /#sidebar-wrapper -->
-      ";
+              <!-- /.navbar-top-links -->
+
+              <div class=\"navbar-default sidebar\" role=\"navigation\">
+                  <div class=\"sidebar-nav navbar-collapse\">
+                      <ul class=\"nav\" id=\"side-menu\">
+
+
+                          <li>
+                              <a href=\"#\">Alumnos<span class=\"fa arrow\"></span></a>
+                              <ul class=\"nav nav-second-level\">
+                                  <li>
+                                      <a href=\"/gestor/alumno/all\"><i class=\"fa fa-table fa-fw\"></i>Tabla alumno</a>
+                                  </li>
+                              </ul>
+                              <!-- /.nav-second-level -->
+                          </li>
+
+                          <li>
+                              <a href=\"#\">Profesores<span class=\"fa arrow\"></span></a>
+                              <ul class=\"nav nav-second-level\">
+                                  <li>
+                                      <a href=\"/gestor/profesor/new\"><i class=\"fa fa-edit fa-fw\"></i> Formulario profesores</a>
+                                  </li>
+                                  <li>
+                                      <a href=\"/gestor/profesor/all\"><i class=\"fa fa-table fa-fw\"></i>Tabla profesores</a>
+                                  </li>
+                              </ul>
+                              <!-- /.nav-second-level -->
+                          </li>
+
+                          <li>
+                              <a href=\"#\">Empresas<span class=\"fa arrow\"></span></a>
+                              <ul class=\"nav nav-second-level\">
+                                  <li>
+                                      <a href=\"/gestor/empresa/new\"><i class=\"fa fa-edit fa-fw\"></i> Formulario empresas</a>
+                                  </li>
+                                  <li>
+                                      <a href=\"/gestor/empresa\"><i class=\"fa fa-table fa-fw\"></i>Tabla empresas</a>
+                                  </li>
+                              </ul>
+                              <!-- /.nav-second-level -->
+                          </li>
+
+
+
+
+
+                      </ul>
+                  </div>
+                  <!-- /.sidebar-collapse -->
+              </div>
+              <!-- /.navbar-static-side -->
+          </nav>
+
+
+        ";
+        // line 115
+        $this->displayBlock('contenido', $context, $blocks);
+        // line 116
+        echo "
+    </div>
+
+    ";
         
-        $__internal_a78ed82c99da73b38668a420bf3f15a4853c5c26cc649d5968d78d8ae7455c58->leave($__internal_a78ed82c99da73b38668a420bf3f15a4853c5c26cc649d5968d78d8ae7455c58_prof);
+        $__internal_c539a1175e4f47e363cd6cb1e72a41c1b5c23d89ae53d145c1ac3ce766eda95c->leave($__internal_c539a1175e4f47e363cd6cb1e72a41c1b5c23d89ae53d145c1ac3ce766eda95c_prof);
 
     }
 
-    // line 57
+    // line 115
     public function block_contenido($context, array $blocks = array())
     {
-        $__internal_f5c80434c9749f962156fdcb635bea5910b168566d98f758a1488fe8aec0793c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f5c80434c9749f962156fdcb635bea5910b168566d98f758a1488fe8aec0793c->enter($__internal_f5c80434c9749f962156fdcb635bea5910b168566d98f758a1488fe8aec0793c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
+        $__internal_7ce4afc3f0109ee42acf108c36b3b5cf2c03226bba94ea4e34fe948802b0c8a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7ce4afc3f0109ee42acf108c36b3b5cf2c03226bba94ea4e34fe948802b0c8a3->enter($__internal_7ce4afc3f0109ee42acf108c36b3b5cf2c03226bba94ea4e34fe948802b0c8a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
 
         
-        $__internal_f5c80434c9749f962156fdcb635bea5910b168566d98f758a1488fe8aec0793c->leave($__internal_f5c80434c9749f962156fdcb635bea5910b168566d98f758a1488fe8aec0793c_prof);
+        $__internal_7ce4afc3f0109ee42acf108c36b3b5cf2c03226bba94ea4e34fe948802b0c8a3->leave($__internal_7ce4afc3f0109ee42acf108c36b3b5cf2c03226bba94ea4e34fe948802b0c8a3_prof);
 
     }
 
-    // line 59
+    // line 123
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_15a117b30986fd220a2a59b71450998464e1251c73c6be7e17ddc75c4ac0f902 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_15a117b30986fd220a2a59b71450998464e1251c73c6be7e17ddc75c4ac0f902->enter($__internal_15a117b30986fd220a2a59b71450998464e1251c73c6be7e17ddc75c4ac0f902_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
+        $__internal_fd68ecc3179101ae94df46c47816e54125f1c18b7ccada0b4ce4cf9728c8600f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fd68ecc3179101ae94df46c47816e54125f1c18b7ccada0b4ce4cf9728c8600f->enter($__internal_fd68ecc3179101ae94df46c47816e54125f1c18b7ccada0b4ce4cf9728c8600f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "base.html.twig"));
 
+        // line 124
+        echo "
+        <script src=\"";
+        // line 125
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 126
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 127
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/metisMenu.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 128
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/raphael.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 129
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/morris.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 130
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/morris-data.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 131
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/sb-admin-2.js"), "html", null, true);
+        echo "\"></script>
+
+      ";
         
-        $__internal_15a117b30986fd220a2a59b71450998464e1251c73c6be7e17ddc75c4ac0f902->leave($__internal_15a117b30986fd220a2a59b71450998464e1251c73c6be7e17ddc75c4ac0f902_prof);
+        $__internal_fd68ecc3179101ae94df46c47816e54125f1c18b7ccada0b4ce4cf9728c8600f->leave($__internal_fd68ecc3179101ae94df46c47816e54125f1c18b7ccada0b4ce4cf9728c8600f_prof);
 
     }
 
@@ -169,7 +255,7 @@ class __TwigTemplate_f7a6ab47ef6d94aac3ad9ef24ba3d161ab3f63aae953bccc48d53cad827
 
     public function getDebugInfo()
     {
-        return array (  150 => 59,  139 => 57,  102 => 25,  96 => 24,  84 => 12,  75 => 60,  73 => 59,  70 => 58,  68 => 57,  65 => 56,  63 => 24,  55 => 19,  50 => 17,  44 => 14,  39 => 12,  26 => 1,);
+        return array (  237 => 131,  233 => 130,  229 => 129,  225 => 128,  221 => 127,  217 => 126,  213 => 125,  210 => 124,  204 => 123,  193 => 115,  183 => 116,  181 => 115,  88 => 24,  82 => 23,  73 => 134,  71 => 123,  66 => 120,  64 => 23,  56 => 18,  52 => 17,  48 => 16,  44 => 15,  40 => 14,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -187,60 +273,134 @@ class __TwigTemplate_f7a6ab47ef6d94aac3ad9ef24ba3d161ab3f63aae953bccc48d53cad827
 
     <head>
 
-        <meta charset=\"UTF-8\" />
-        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-        <meta name=\"viewport\" content=\"width=device-width, shrink-to-fit=no, initial-scale=1\">
-        <meta name=\"description\" content=\"\">
-        <meta name=\"author\" content=\"\">
+      <meta charset=\"utf-8\">
+      <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+      <meta name=\"description\" content=\"\">
+      <meta name=\"author\" content=\"\">
 
-        <title>{% block title %}Welcome!{% endblock %}</title>
+      <title> GESTOR FCT</title>
 
-        <link href=\"{{ asset('css/bootstrap.min.css') }}\" rel=\"stylesheet\">
-
-        <!-- Custom CSS -->
-        <link href=\"{{ asset('css/simple-sidebar.css') }}\" rel=\"stylesheet\">
-
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\" />
+      <link href=\"{{ asset('css/bootstrap.min.css') }}\"rel=\"stylesheet\">
+      <link href=\"{{ asset('css/metisMenu.min.css') }}\" rel=\"stylesheet\">
+      <link href=\"{{ asset('css/sb-admin-2.min.css') }}\" rel=\"stylesheet\">
+      <link href=\"{{ asset('css/morris.css') }}\" rel=\"stylesheet\">
+      <link href=\"{{ asset('css/font/css/font-awesome.min.css') }}\" rel=\"stylesheet\">
 
     </head>
     <body>
 
       {% block menu %}
 
-      <div id=\"wrapper\" class=\"md-3\">
+      <div id=\"wrapper\">
 
-          <!-- Sidebar -->
-          <div id=\"sidebar-wrapper\">
-              <ul class=\"sidebar-nav\">
-                  <li class=\"sidebar-brand\">
-                      <a href=\"/gestor/\">
-                          Gestor FCT
+          <!-- Navigation -->
+          <nav class=\"navbar navbar-default navbar-static-top\" role=\"navigation\" style=\"margin-bottom: 0\">
+              <div class=\"navbar-header\">
+                  <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
+                      <span class=\"sr-only\">Toggle navigation</span>
+                      <span class=\"icon-bar\"></span>
+                      <span class=\"icon-bar\"></span>
+                      <span class=\"icon-bar\"></span>
+                  </button>
+                  <a class=\"navbar-brand\" href=\"index.html\">GESTOR FCT</a>
+              </div>
+              <!-- /.navbar-header -->
+
+              <ul class=\"nav navbar-top-links navbar-right\">
+
+
+                  <li class=\"dropdown\">
+                      <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">
+                          <i class=\"fa fa-user fa-fw\"></i> <i class=\"fa fa-caret-down\"></i>
                       </a>
+                      <ul class=\"dropdown-menu dropdown-messages\">
+                          <li><a href=\"#\"><i class=\"fa fa-user fa-fw\"></i> User Profile</a>
+                          </li>
+                          <li><a href=\"#\"><i class=\"fa fa-gear fa-fw\"></i> Settings</a>
+                          </li>
+                          <li class=\"divider\"></li>
+                          <li><a href=\"login.html\"><i class=\"fa fa-sign-out fa-fw\"></i> Logout</a>
+                          </li>
+                      </ul>
+                      <!-- /.dropdown-user -->
                   </li>
-                  <li>
-                      <a href=\"/gestor/empresa\">Listado Empresas</a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/empresa/new\">Nueva Empresa</a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/alumno/all\">Listado Alumnos </a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/profesor/all\"> Listado Profesores </a>
-                  </li>
-                  <li>
-                      <a href=\"/gestor/profesor/new\"> Nuevos Profesores </a>
-                  </li>
-
+                  <!-- /.dropdown -->
               </ul>
-          </div>
-          <!-- /#sidebar-wrapper -->
+              <!-- /.navbar-top-links -->
+
+              <div class=\"navbar-default sidebar\" role=\"navigation\">
+                  <div class=\"sidebar-nav navbar-collapse\">
+                      <ul class=\"nav\" id=\"side-menu\">
+
+
+                          <li>
+                              <a href=\"#\">Alumnos<span class=\"fa arrow\"></span></a>
+                              <ul class=\"nav nav-second-level\">
+                                  <li>
+                                      <a href=\"/gestor/alumno/all\"><i class=\"fa fa-table fa-fw\"></i>Tabla alumno</a>
+                                  </li>
+                              </ul>
+                              <!-- /.nav-second-level -->
+                          </li>
+
+                          <li>
+                              <a href=\"#\">Profesores<span class=\"fa arrow\"></span></a>
+                              <ul class=\"nav nav-second-level\">
+                                  <li>
+                                      <a href=\"/gestor/profesor/new\"><i class=\"fa fa-edit fa-fw\"></i> Formulario profesores</a>
+                                  </li>
+                                  <li>
+                                      <a href=\"/gestor/profesor/all\"><i class=\"fa fa-table fa-fw\"></i>Tabla profesores</a>
+                                  </li>
+                              </ul>
+                              <!-- /.nav-second-level -->
+                          </li>
+
+                          <li>
+                              <a href=\"#\">Empresas<span class=\"fa arrow\"></span></a>
+                              <ul class=\"nav nav-second-level\">
+                                  <li>
+                                      <a href=\"/gestor/empresa/new\"><i class=\"fa fa-edit fa-fw\"></i> Formulario empresas</a>
+                                  </li>
+                                  <li>
+                                      <a href=\"/gestor/empresa\"><i class=\"fa fa-table fa-fw\"></i>Tabla empresas</a>
+                                  </li>
+                              </ul>
+                              <!-- /.nav-second-level -->
+                          </li>
+
+
+
+
+
+                      </ul>
+                  </div>
+                  <!-- /.sidebar-collapse -->
+              </div>
+              <!-- /.navbar-static-side -->
+          </nav>
+
+
+        {% block contenido %}{% endblock %}
+
+    </div>
+
+    {% endblock %}
+
+
+
+      {% block javascripts %}
+
+        <script src=\"{{ asset('js/jquery.min.js') }}\"></script>
+        <script src=\"{{ asset('js/bootstrap.min.js') }}\"></script>
+        <script src=\"{{ asset('js/metisMenu.min.js') }}\"></script>
+        <script src=\"{{ asset('js/raphael.min.js') }}\"></script>
+        <script src=\"{{ asset('js/morris.min.js') }}\"></script>
+        <script src=\"{{ asset('js/morris-data.js') }}\"></script>
+        <script src=\"{{ asset('js/sb-admin-2.js') }}\"></script>
+
       {% endblock %}
-
-      {% block contenido %}{% endblock%}
-
-      {% block javascripts %}{% endblock %}
     </body>
 </html>
 ", "base.html.twig", "/Users/Borja/Documents/Informatica/2DAW/DWES/Actividades/GestorFCT/app/Resources/views/base.html.twig");
