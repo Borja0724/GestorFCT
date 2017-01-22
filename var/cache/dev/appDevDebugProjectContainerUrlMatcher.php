@@ -100,45 +100,35 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'homepage');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+        }
+
         if (0 === strpos($pathinfo, '/gestor')) {
-            // gestor_fct_homepage
-            if ($pathinfo === '/gestor/home') {
-                return array (  '_controller' => 'GestorFCTBundle\\Controller\\DefaultController::indexAction',  '_route' => 'gestor_fct_homepage',);
-            }
-
-            if (0 === strpos($pathinfo, '/gestor/empresa')) {
-                // gestor_fct_empresa
-                if ($pathinfo === '/gestor/empresa') {
-                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\EmpresaController::mostrarTablaAction',  '_route' => 'gestor_fct_empresa',);
-                }
-
-                // Formulario_empresa
-                if ($pathinfo === '/gestor/empresa/new') {
-                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\FormularioController::formularioAction',  '_route' => 'Formulario_empresa',);
-                }
-
-            }
-
-            // alumno_empresa
+            // alumno_tabla
             if ($pathinfo === '/gestor/alumno/all') {
-                return array (  '_controller' => 'GestorFCTBundle\\Controller\\AlumnoController::mostrarAlumnoAction',  '_route' => 'alumno_empresa',);
+                return array (  '_controller' => 'GestorFCTBundle\\Controller\\AlumnoController::mostrarAlumnoAction',  '_route' => 'alumno_tabla',);
             }
 
-            //  gestor_fct_api
-            if ($pathinfo === '/gestor/empresas/api') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_gestor_fct_api;
-                }
-
-                return array (  '_controller' => 'GestorFCTBundle\\Controller\\EmpresaController::empresasAction',  '_route' => ' gestor_fct_api',);
+            // login
+            if ($pathinfo === '/gestor/login') {
+                return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::loginAction',  '_route' => 'login',);
             }
-            not_gestor_fct_api:
+
+            // registrarse
+            if ($pathinfo === '/gestor/registrarse') {
+                return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'registrarse',);
+            }
 
             if (0 === strpos($pathinfo, '/gestor/profesor')) {
-                // profesor_all
+                // profesor_tabla
                 if ($pathinfo === '/gestor/profesor/all') {
-                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\ProfesorController::mostrarProfesorAction',  '_route' => 'profesor_all',);
+                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\ProfesorController::mostrarProfesorAction',  '_route' => 'profesor_tabla',);
                 }
 
                 // profesor_form
@@ -159,34 +149,35 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
-            // registrarse
-            if (rtrim($pathinfo, '/') === '/gestor') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'registrarse');
+            if (0 === strpos($pathinfo, '/gestor/empresa')) {
+                // empresa_tabla
+                if ($pathinfo === '/gestor/empresa/all') {
+                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\EmpresaController::mostrarTablaAction',  '_route' => 'empresa_tabla',);
                 }
 
-                return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'registrarse',);
+                // empresa_form
+                if ($pathinfo === '/gestor/empresa/new') {
+                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\EmpresaController::formularioAction',  '_route' => 'empresa_form',);
+                }
+
+                // empresa_api
+                if ($pathinfo === '/gestor/empresas/api') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_empresa_api;
+                    }
+
+                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\EmpresaController::empresasAction',  '_route' => 'empresa_api',);
+                }
+                not_empresa_api:
+
             }
 
-            // login
-            if ($pathinfo === '/gestor/login') {
-                return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::loginAction',  '_route' => 'login',);
+            // logout
+            if ($pathinfo === '/gestor/logout') {
+                return array('_route' => 'logout');
             }
 
-        }
-
-        // homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
-            }
-
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
-        }
-
-        // logout
-        if ($pathinfo === '/gestor/logout') {
-            return array('_route' => 'logout');
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

@@ -488,7 +488,7 @@
                   <tag name="cache.pool"/>
                   <argument>hvm9cXv1B-</argument>
                   <argument>0</argument>
-                  <argument>A4GofgSyIQc5l0whTQ4TDg</argument>
+                  <argument>ZVrxo4i-7u1+NjlPxnW4IQ</argument>
                   <argument>/Users/Borja/Documents/Informatica/2DAW/DWES/Actividades/GestorFCT/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -501,7 +501,7 @@
                   <tag name="cache.pool"/>
                   <argument>mzRkb9hH8q</argument>
                   <argument>0</argument>
-                  <argument>A4GofgSyIQc5l0whTQ4TDg</argument>
+                  <argument>ZVrxo4i-7u1+NjlPxnW4IQ</argument>
                   <argument>/Users/Borja/Documents/Informatica/2DAW/DWES/Actividades/GestorFCT/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -833,7 +833,7 @@
       <tag name="cache.pool"/>
       <argument>vUaa2-rx+A</argument>
       <argument>0</argument>
-      <argument>A4GofgSyIQc5l0whTQ4TDg</argument>
+      <argument>ZVrxo4i-7u1+NjlPxnW4IQ</argument>
       <argument>/Users/Borja/Documents/Informatica/2DAW/DWES/Actividades/GestorFCT/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1577,13 +1577,20 @@
           </service>
         </argument>
         <argument type="service">
-          <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>58776840b950a2.54472002</argument>
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider" public="false">
+            <argument type="service" id="security.user_checker.usuario"/>
+            <argument>1ed38378be8046a4c3278c3852adbb5d0a53cf01</argument>
+            <argument>usuario</argument>
           </service>
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>58776840b950a2.54472002</argument>
+            <argument>58809132076cd8.93551793</argument>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+            <argument>58809132076cd8.93551793</argument>
           </service>
         </argument>
       </argument>
@@ -1671,7 +1678,7 @@
       <call method="add">
         <argument type="service">
           <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-            <argument>^/gestor/</argument>
+            <argument>^/gestor/registrarse</argument>
           </service>
         </argument>
         <argument type="collection">
@@ -1682,7 +1689,7 @@
       <call method="add">
         <argument type="service">
           <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-            <argument>^/</argument>
+            <argument>^/gestor</argument>
           </service>
         </argument>
         <argument type="collection">
@@ -1780,7 +1787,7 @@
             <argument type="service">
               <service class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
                 <argument type="service" id="security.http_utils"/>
-                <argument>/gestor</argument>
+                <argument>/gestor/login</argument>
               </service>
             </argument>
             <argument type="collection">
@@ -1791,6 +1798,28 @@
             <call method="addHandler">
               <argument type="service">
                 <service class="Symfony\Component\Security\Http\Logout\SessionLogoutHandler" public="false"/>
+              </argument>
+            </call>
+            <call method="addHandler">
+              <argument type="service">
+                <service class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+                  <argument type="collection">
+                    <argument type="service" id="security.user.provider.concrete.db_provider"/>
+                  </argument>
+                  <argument>1ed38378be8046a4c3278c3852adbb5d0a53cf01</argument>
+                  <argument>usuario</argument>
+                  <argument type="collection">
+                    <argument key="lifetime">604800</argument>
+                    <argument key="path">/gestor/login</argument>
+                    <argument key="name">REMEMBERME</argument>
+                    <argument key="domain">null</argument>
+                    <argument key="secure">false</argument>
+                    <argument key="httponly">true</argument>
+                    <argument key="always_remember_me">false</argument>
+                    <argument key="remember_me_parameter">_remember_me</argument>
+                  </argument>
+                  <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+                </service>
               </argument>
             </call>
           </service>
@@ -1854,12 +1883,68 @@
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
             <argument>null</argument>
+            <call method="setRememberMeServices">
+              <argument type="service">
+                <service class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+                  <argument type="collection">
+                    <argument type="service" id="security.user.provider.concrete.db_provider"/>
+                  </argument>
+                  <argument>1ed38378be8046a4c3278c3852adbb5d0a53cf01</argument>
+                  <argument>usuario</argument>
+                  <argument type="collection">
+                    <argument key="lifetime">604800</argument>
+                    <argument key="path">/gestor/login</argument>
+                    <argument key="name">REMEMBERME</argument>
+                    <argument key="domain">null</argument>
+                    <argument key="secure">false</argument>
+                    <argument key="httponly">true</argument>
+                    <argument key="always_remember_me">false</argument>
+                    <argument key="remember_me_parameter">_remember_me</argument>
+                  </argument>
+                  <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+                </service>
+              </argument>
+            </call>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\Security\Http\Firewall\RememberMeListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\RememberMe\TokenBasedRememberMeServices" public="false">
+                <argument type="collection">
+                  <argument type="service" id="security.user.provider.concrete.db_provider"/>
+                </argument>
+                <argument>1ed38378be8046a4c3278c3852adbb5d0a53cf01</argument>
+                <argument>usuario</argument>
+                <argument type="collection">
+                  <argument key="lifetime">604800</argument>
+                  <argument key="path">/gestor/login</argument>
+                  <argument key="name">REMEMBERME</argument>
+                  <argument key="domain">null</argument>
+                  <argument key="secure">false</argument>
+                  <argument key="httponly">true</argument>
+                  <argument key="always_remember_me">false</argument>
+                  <argument key="remember_me_parameter">_remember_me</argument>
+                </argument>
+                <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+              </service>
+            </argument>
+            <argument type="service" id="security.authentication.manager"/>
+            <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+            <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+            <argument>true</argument>
+            <argument type="service">
+              <service class="Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy" public="false">
+                <argument>migrate</argument>
+              </service>
+            </argument>
           </service>
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>58776840b950a2.54472002</argument>
+            <argument>58809132076cd8.93551793</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -1905,7 +1990,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>58776840b950a2.54472002</argument>
+            <argument>58809132076cd8.93551793</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

@@ -1,11 +1,11 @@
-gestor_fct:
-    resource: "@GestorFCTBundle/Resources/config/routing.yml"
-    prefix:   /gestor/
-
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
     prefix:   /
+
+gestor_fct:
+    resource: "@GestorFCTBundle/Resources/config/routing.yml"
+    prefix:   /gestor/
 
 logout:
     path: /gestor/logout

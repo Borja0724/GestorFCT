@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Profesores</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-6">
+
+                {{ form_start(formulario) }}
+
+                  <div class="form-group">
+
+                    {{form_label(formulario.nombre)}}
+                    {{ form_widget(formulario.nombre, {'attr': {'class': 'form-control'} }) }}
+
+                    <br />
+
+                    {{form_label(formulario.apellidos)}}
+                    {{ form_widget(formulario.apellidos, {'attr': {'class': 'form-control'} }) }}
+
+                    <br />
+
+                    {{form_label(formulario.departamento)}}
+                    {{ form_widget(formulario.departamento, {'attr': {'class': 'form-control'} }) }}
+
+                    <br />
+
+                    {{ form_widget(formulario.Guardar, {'attr': {'class': 'btn btn-default'} }) }}
+
+                    {{ form_widget(formulario.Borrar, {'attr': {'class': 'btn btn-default'} }) }}
+
+                  </div>
+
+                {{ form_end(formulario) }}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

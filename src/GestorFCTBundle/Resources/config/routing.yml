@@ -1,25 +1,20 @@
-gestor_fct_homepage:
-    path:     /home
-    defaults: { _controller: GestorFCTBundle:Default:index }
-
-gestor_fct_empresa:
-    path:     /empresa
-    defaults: { _controller: GestorFCTBundle:Empresa:mostrarTabla }
-
-Formulario_empresa:
-    path:     /empresa/new
-    defaults: { _controller: GestorFCTBundle:Formulario:formulario }
-
-alumno_empresa:
+alumno_tabla:
     path:     /alumno/all
     defaults: { _controller: GestorFCTBundle:Alumno:mostrarAlumno }
 
- gestor_fct_api:
-    path:     /empresas/api
-    defaults: { _controller: GestorFCTBundle:Empresa:empresas }
-    methods: [GET]
+login:
+    path:     /login
+    defaults: { _controller: GestorFCTBundle:Registration:login }
 
-profesor_all:
+registrarse:
+    path:     /registrarse
+    defaults: { _controller: GestorFCTBundle:Registration:register }
+
+
+
+
+
+profesor_tabla:
     path:     /profesor/all
     defaults: { _controller: GestorFCTBundle:Profesor:mostrarProfesor }
 
@@ -32,10 +27,16 @@ profesor_api:
     defaults: { _controller: GestorFCTBundle:Profesor:proferosesApi }
     methods: [GET]
 
-registrarse:
-    path:     /
-    defaults: { _controller: GestorFCTBundle:Registration:register }
 
-login:
-    path:     /login
-    defaults: { _controller: GestorFCTBundle:Registration:login }
+empresa_tabla:
+    path:     /empresa/all
+    defaults: { _controller: GestorFCTBundle:Empresa:mostrarTabla }
+
+empresa_form:
+    path:     /empresa/new
+    defaults: { _controller: GestorFCTBundle:Empresa:formulario }
+
+empresa_api:
+    path:     /empresas/api
+    defaults: { _controller: GestorFCTBundle:Empresa:empresas }
+    methods: [GET]

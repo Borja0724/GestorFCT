@@ -29,7 +29,11 @@ security:
               check_path: /gestor/login
           logout:
             path: /gestor/logout
-            target: /gestor
+            target: /gestor/login
+          remember_me:
+            secret:   '%secret%'
+            lifetime: 604800 # 1 week in seconds
+            path:     /gestor/login
 
         main:
             anonymous: ~
@@ -43,6 +47,6 @@ security:
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
 
     access_control:
-    -  { path: ^/gestor/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    -  { path: ^/gestor/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    -  { path: ^/, roles: ROLE_USER }
+        - { path: ^/gestor/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/gestor/registrarse, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/gestor, roles: ROLE_USER }
