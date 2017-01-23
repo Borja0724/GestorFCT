@@ -49,4 +49,5 @@ security:
     access_control:
         - { path: ^/gestor/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/gestor/registrarse, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/gestor, roles: ROLE_USER }
+        - { path: ^/gestor/admin, roles: ROLE_ADMIN }
+        - { path: ^/gestor, roles: ROLE_USUARIO }

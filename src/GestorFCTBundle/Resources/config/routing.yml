@@ -10,6 +10,10 @@ registrarse:
     path:     /registrarse
     defaults: { _controller: GestorFCTBundle:Registration:register }
 
+admin:
+    path:     /admin
+    defaults: { _controller: GestorFCTBundle:Registration:admin }
+
 
 
 

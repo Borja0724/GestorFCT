@@ -41,7 +41,14 @@
                 </a>
 
                 <ul class="dropdown-menu dropdown-messages">
-                  <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+
+                  {% if is_granted('ROLE_ADMIN') %}
+
+                      <li><a href="/gestor/admin"><i class="fa fa-user fa-fw"></i> Admin </a></li>
+                      
+                  {% endif %}
+
+
                   <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
                   <li class="divider"></li>
                   <li><a href="/gestor/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>

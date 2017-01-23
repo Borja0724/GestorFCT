@@ -125,6 +125,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'registrarse',);
             }
 
+            // admin
+            if ($pathinfo === '/gestor/admin') {
+                return array (  '_controller' => 'GestorFCTBundle\\Controller\\RegistrationController::adminAction',  '_route' => 'admin',);
+            }
+
             if (0 === strpos($pathinfo, '/gestor/profesor')) {
                 // profesor_tabla
                 if ($pathinfo === '/gestor/profesor/all') {

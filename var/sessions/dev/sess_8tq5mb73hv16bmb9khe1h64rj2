@@ -1,1 +1,1 @@
-_sf2_attributes|a:1:{s:26:"_csrf/gestorfctbundle_user";s:43:"Vnu2b4KnPVyGa7sR3FbMW2NPI1QxYvMwmlsDCk1HeU8";}_sf2_flashes|a:0:{}_sf2_meta|a:3:{s:1:"u";i:1485185033;s:1:"c";i:1485180094;s:1:"l";s:1:"0";}
+_sf2_attributes|a:2:{s:26:"_csrf/gestorfctbundle_user";s:43:"Vnu2b4KnPVyGa7sR3FbMW2NPI1QxYvMwmlsDCk1HeU8";s:29:"_security.usuario.target_path";s:39:"http://localhost:8000/gestor/alumno/all";}_sf2_flashes|a:0:{}_sf2_meta|a:3:{s:1:"u";i:1485186431;s:1:"c";i:1485180094;s:1:"l";s:1:"0";}

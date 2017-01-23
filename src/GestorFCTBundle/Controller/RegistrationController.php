@@ -21,12 +21,15 @@ class RegistrationController extends Controller
 
         // 2) handle the submit (will only happen on POST)
         $form->handleRequest($request);
+        $roles = ["ROLE_USUARIO"];
+
         if ($form->isSubmitted() && $form->isValid()) {
 
             // 3) Encode the password (you could also do this via Doctrine listener)
             $password = $this->get('security.password_encoder')
                 ->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
+            $user->setRoles($roles);
 
             // 4) save the User!
             $em = $this->getDoctrine()->getManager();
@@ -60,4 +63,11 @@ class RegistrationController extends Controller
         'error'         => $error,
       ));
     }
+
+    public function adminAction()
+    {
+            return $this->render('GestorFCTBundle:Default:admin.html.twig');
+    }
+
+
 }
