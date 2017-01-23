@@ -5,6 +5,10 @@ namespace GestorFCTBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Regex;
+
+
 
 /**
  * User
@@ -27,6 +31,15 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=255, unique=true)
+     *
+     * @Assert\NotBlank( message= "El campo esta vacio")
+     *
+     * @Assert\Length(
+     *      min = 4,
+     *      max = 32,
+     *      minMessage = "Minimo 4 caracteres",
+     *      maxMessage = "Máximo 32 caracteres"
+     * )
      */
     private $username;
 
@@ -34,6 +47,13 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
+     *
+     * @Assert\NotBlank( message= "El campo esta vacio")
+     *
+     * @Assert\Email(
+     *     message = "Email incorrecto",
+     *     checkMX = true
+     * )
      */
     private $email;
 
@@ -41,8 +61,11 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=64)
+     *
      */
     private $password;
+
+
 
     /**
      * Get id
@@ -53,6 +76,17 @@ class User implements UserInterface
     {
         return $this->id;
     }
+
+    /**
+     * @Assert\NotBlank( message= "El campo esta vacio" )
+     *
+     * @Assert\Regex(
+     *     pattern="/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/",
+     *     match=true,
+     *     message="El password debe contener una mayúscula, letras y números y no debe tener menos de 8 caracteres"
+     *
+     * )
+     */
 
     private $plainPassword;
 

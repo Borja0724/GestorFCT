@@ -1,2 +1,2 @@
 0
-a:0:{}
+a:2:{i:0;O:48:"Symfony\Component\Validator\Constraints\NotBlank":3:{s:7:"message";s:19:"El campo esta vacio";s:7:"payload";N;s:6:"groups";a:1:{i:0;s:7:"Default";}}i:1;O:45:"Symfony\Component\Validator\Constraints\Regex":6:{s:7:"message";s:97:"El password debe contener una mayúscula, letras y números y no debe tener menos de 8 caracteres";s:7:"pattern";s:37:"/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/";s:11:"htmlPattern";N;s:5:"match";b:1;s:7:"payload";N;s:6:"groups";a:1:{i:0;s:7:"Default";}}}

@@ -13,35 +13,27 @@
 
                   {{ form_start(form) }}
 
-                    <div class="form-group">
 
-                      {{form_label(form.username)}}
-                      {{ form_widget(form.username, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.username, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{form_label(form.email)}}
-                      {{ form_widget(form.email, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.email, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{form_label(form.plainPassword.first)}}
-                      {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.plainPassword.first, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{form_label(form.plainPassword.second)}}
-                      {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.plainPassword.second, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{ form_widget(form.Registrarse, {'attr': {'class': 'btn btn-lg btn-success btn-block'} }) }}
-
-                    </div>
+                      {{ form_row(form.Registrarse, {'attr': {'class': 'btn btn-lg btn-success btn-block'} }) }}
 
                   {{ form_end(form) }}
 
-                  </form>
                 </div>
             </div>
         </div>

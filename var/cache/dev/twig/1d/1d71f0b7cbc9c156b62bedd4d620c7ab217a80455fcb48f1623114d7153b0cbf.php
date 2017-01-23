@@ -21,20 +21,20 @@ class __TwigTemplate_84b63101a0e77bc1b9915840d9fe2036a5946e13d2e7bb2d667b67ee9ba
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f62d92107d9149d876bcfe8e9054dd1073e784d764d5e70e8b79b99895710c5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2f62d92107d9149d876bcfe8e9054dd1073e784d764d5e70e8b79b99895710c5->enter($__internal_2f62d92107d9149d876bcfe8e9054dd1073e784d764d5e70e8b79b99895710c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:register.html.twig"));
+        $__internal_c039cd8ff61932882c30b4f1fb84d87f9be4ed0c0d51b9e534b708a2847417c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c039cd8ff61932882c30b4f1fb84d87f9be4ed0c0d51b9e534b708a2847417c7->enter($__internal_c039cd8ff61932882c30b4f1fb84d87f9be4ed0c0d51b9e534b708a2847417c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GestorFCTBundle:Default:register.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2f62d92107d9149d876bcfe8e9054dd1073e784d764d5e70e8b79b99895710c5->leave($__internal_2f62d92107d9149d876bcfe8e9054dd1073e784d764d5e70e8b79b99895710c5_prof);
+        $__internal_c039cd8ff61932882c30b4f1fb84d87f9be4ed0c0d51b9e534b708a2847417c7->leave($__internal_c039cd8ff61932882c30b4f1fb84d87f9be4ed0c0d51b9e534b708a2847417c7_prof);
 
     }
 
     // line 3
     public function block_menu($context, array $blocks = array())
     {
-        $__internal_8f952ff857326b905fa47d2774be99f31af84a2fa4b3fdf272650a8924c29cb7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8f952ff857326b905fa47d2774be99f31af84a2fa4b3fdf272650a8924c29cb7->enter($__internal_8f952ff857326b905fa47d2774be99f31af84a2fa4b3fdf272650a8924c29cb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:register.html.twig"));
+        $__internal_6ee893ddb8fbb8cc92edc838f75e9b54039f52f2077ff0e5933f1779a1be8f23 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6ee893ddb8fbb8cc92edc838f75e9b54039f52f2077ff0e5933f1779a1be8f23->enter($__internal_6ee893ddb8fbb8cc92edc838f75e9b54039f52f2077ff0e5933f1779a1be8f23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "GestorFCTBundle:Default:register.html.twig"));
 
         // line 4
         echo "
@@ -52,65 +52,45 @@ class __TwigTemplate_84b63101a0e77bc1b9915840d9fe2036a5946e13d2e7bb2d667b67ee9ba
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
 
-                    <div class=\"form-group\">
 
                       ";
-        // line 18
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "username", array()), 'label');
-        echo "
-                      ";
-        // line 19
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "username", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 17
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "username", array()), 'row', array("attr" => array("class" => "form-control")));
         echo "
 
                       <br />
 
                       ";
-        // line 23
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'label');
-        echo "
-                      ";
-        // line 24
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 21
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "email", array()), 'row', array("attr" => array("class" => "form-control")));
         echo "
 
                       <br />
 
                       ";
-        // line 28
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "first", array()), 'label');
+        // line 25
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "first", array()), 'row', array("attr" => array("class" => "form-control")));
         echo "
+
+                      <br />
+
                       ";
         // line 29
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "first", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "second", array()), 'row', array("attr" => array("class" => "form-control")));
         echo "
 
                       <br />
 
                       ";
         // line 33
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "second", array()), 'label');
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Registrarse", array()), 'row', array("attr" => array("class" => "btn btn-lg btn-success btn-block")));
         echo "
-                      ";
-        // line 34
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "plainPassword", array()), "second", array()), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-
-                      <br />
-
-                      ";
-        // line 38
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "Registrarse", array()), 'widget', array("attr" => array("class" => "btn btn-lg btn-success btn-block")));
-        echo "
-
-                    </div>
 
                   ";
-        // line 42
+        // line 35
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
-                  </form>
                 </div>
             </div>
         </div>
@@ -119,7 +99,7 @@ class __TwigTemplate_84b63101a0e77bc1b9915840d9fe2036a5946e13d2e7bb2d667b67ee9ba
 
 ";
         
-        $__internal_8f952ff857326b905fa47d2774be99f31af84a2fa4b3fdf272650a8924c29cb7->leave($__internal_8f952ff857326b905fa47d2774be99f31af84a2fa4b3fdf272650a8924c29cb7_prof);
+        $__internal_6ee893ddb8fbb8cc92edc838f75e9b54039f52f2077ff0e5933f1779a1be8f23->leave($__internal_6ee893ddb8fbb8cc92edc838f75e9b54039f52f2077ff0e5933f1779a1be8f23_prof);
 
     }
 
@@ -135,7 +115,7 @@ class __TwigTemplate_84b63101a0e77bc1b9915840d9fe2036a5946e13d2e7bb2d667b67ee9ba
 
     public function getDebugInfo()
     {
-        return array (  110 => 42,  103 => 38,  96 => 34,  92 => 33,  85 => 29,  81 => 28,  74 => 24,  70 => 23,  63 => 19,  59 => 18,  52 => 14,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  91 => 35,  86 => 33,  79 => 29,  72 => 25,  65 => 21,  58 => 17,  52 => 14,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -163,35 +143,27 @@ class __TwigTemplate_84b63101a0e77bc1b9915840d9fe2036a5946e13d2e7bb2d667b67ee9ba
 
                   {{ form_start(form) }}
 
-                    <div class=\"form-group\">
 
-                      {{form_label(form.username)}}
-                      {{ form_widget(form.username, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.username, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{form_label(form.email)}}
-                      {{ form_widget(form.email, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.email, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{form_label(form.plainPassword.first)}}
-                      {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.plainPassword.first, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{form_label(form.plainPassword.second)}}
-                      {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'} }) }}
+                      {{ form_row(form.plainPassword.second, {'attr': {'class': 'form-control'} }) }}
 
                       <br />
 
-                      {{ form_widget(form.Registrarse, {'attr': {'class': 'btn btn-lg btn-success btn-block'} }) }}
-
-                    </div>
+                      {{ form_row(form.Registrarse, {'attr': {'class': 'btn btn-lg btn-success btn-block'} }) }}
 
                   {{ form_end(form) }}
 
-                  </form>
                 </div>
             </div>
         </div>
