@@ -26,6 +26,7 @@ security:
           form_login:
               login_path: /gestor/login
               check_path: /gestor/login
+              default_target_path: /gestor/alumno/all
           logout:
             path: /gestor/logout
             target: /gestor/login
@@ -48,5 +49,6 @@ security:
     access_control:
         - { path: ^/gestor/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/gestor/registrarse, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/gestor/conf, roles: ROLE_SUPER_ADMIN }
         - { path: ^/gestor/admin, roles: ROLE_ADMIN }
         - { path: ^/gestor, roles: ROLE_USUARIO }

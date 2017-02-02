@@ -45,7 +45,7 @@
                   {% if is_granted('ROLE_ADMIN') %}
 
                       <li><a href="/gestor/admin"><i class="fa fa-user fa-fw"></i> Admin </a></li>
-                      
+
                   {% endif %}
 
 
@@ -96,6 +96,25 @@
                       </li>
                     </ul>
                   </li>
+
+                  {% if is_granted('ROLE_SUPER_ADMIN') %}
+
+                  <li>
+                    <a href="#">Configuracion<span class="fa arrow"></span></a>
+
+                    <ul class="nav nav-second-level">
+                      <li>
+                        <a href="/gestor/conf/all"><i class="fa fa-table fa-fw"></i>Tabla configuracion</a>
+                      </li>
+
+                      <li>
+                        <a href="/gestor/conf/new"><i class="fa fa-edit fa-fw"></i> Formulario configuracion</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {% endif %}
+
                 </ul>
               </div>
             </div>

@@ -178,6 +178,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
+            if (0 === strpos($pathinfo, '/gestor/conf')) {
+                // conf_tabla
+                if ($pathinfo === '/gestor/conf/all') {
+                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\ConfController::mostrarTablaAction',  '_route' => 'conf_tabla',);
+                }
+
+                // conf_form
+                if ($pathinfo === '/gestor/conf/new') {
+                    return array (  '_controller' => 'GestorFCTBundle\\Controller\\ConfController::formularioAction',  '_route' => 'conf_form',);
+                }
+
+            }
+
             // logout
             if ($pathinfo === '/gestor/logout') {
                 return array('_route' => 'logout');

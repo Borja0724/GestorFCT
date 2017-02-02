@@ -44,3 +44,12 @@ empresa_api:
     path:     /empresas/api
     defaults: { _controller: GestorFCTBundle:Empresa:empresas }
     methods: [GET]
+
+
+conf_tabla:
+    path:     /conf/all
+    defaults: { _controller: GestorFCTBundle:Conf:mostrarTabla }
+
+conf_form:
+    path:     /conf/new
+    defaults: { _controller: GestorFCTBundle:Conf:formulario }
