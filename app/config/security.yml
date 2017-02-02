@@ -23,7 +23,6 @@ security:
           pattern: ^/gestor
           anonymous: ~
           provider: db_provider
-          provider: in_memory
           form_login:
               login_path: /gestor/login
               check_path: /gestor/login

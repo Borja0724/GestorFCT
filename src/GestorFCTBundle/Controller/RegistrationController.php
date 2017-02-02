@@ -66,7 +66,9 @@ class RegistrationController extends Controller
 
     public function adminAction()
     {
-            return $this->render('GestorFCTBundle:Default:admin.html.twig');
+      $repository = $this->getDoctrine()->getRepository('GestorFCTBundle:User');
+      $user = $repository->findAll();
+      return $this->render('GestorFCTBundle:Default:admin.html.twig',array("user"=>$user));
     }
 
 
